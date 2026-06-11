@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LUMINA ESSENCE | Our Story — Artisan Soul</title>
+  <!-- Google Fonts & reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;40..800,400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf6;
+      color: #1e1b1a;
+      line-height: 1.5;
+    }
+
+    /* Brand colors - cohesive with home/terms/privacy */
+    :root {
+      --brand-deep: #2C1A2E;
+      --brand-amber: #E67E3A;
+      --brand-cream: #FFF9F0;
+      --brand-soft-gold: #F4C3A2;
+      --brand-gray: #5A4B49;
+      --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* header same as global */
+    .site-header {
+      background: var(--brand-cream);
+      border-bottom: 1px solid rgba(230, 126, 58, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      font-size: 28px;
+      color: var(--brand-amber);
+    }
+
+    .brand-name {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #2C1A2E 0%, #E67E3A 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .brand-sup {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--brand-gray);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--brand-deep);
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-amber);
+    }
+
+    /* About hero */
+    .about-hero {
+      background: linear-gradient(125deg, #FDF4E7 0%, #F7E7DA 100%);
+      border-radius: 48px;
+      margin: 32px 0 40px 0;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+      padding: 56px 48px;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--brand-deep);
+      margin-bottom: 20px;
+    }
+
+    .hero-tagline {
+      font-size: 1.25rem;
+      color: #6b4e3e;
+      margin-bottom: 28px;
+      border-left: 3px solid var(--brand-amber);
+      padding-left: 20px;
+      font-weight: 500;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      margin-top: 32px;
+    }
+
+    .stat {
+      text-align: left;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--brand-amber);
+    }
+
+    .hero-image {
+      flex: 1;
+      min-height: 380px;
+      background-image: url('https://picsum.photos/id/106/800/600');
+      background-size: cover;
+      background-position: center 30%;
+      border-radius: 32px;
+      margin: 28px 28px 28px 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    /* story sections */
+    .story-section {
+      background: white;
+      border-radius: 40px;
+      padding: 48px 56px;
+      margin-bottom: 56px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+      border: 1px solid #fae6d8;
+    }
+
+    .story-grid {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .story-text {
+      flex: 1.2;
+    }
+
+    .story-text h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--brand-deep);
+      margin-bottom: 20px;
+      border-left: 5px solid var(--brand-amber);
+      padding-left: 20px;
+    }
+
+    .story-text p {
+      margin-bottom: 18px;
+      color: #2f2a28;
+      line-height: 1.6;
+    }
+
+    .story-img {
+      flex: 0.9;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .story-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .story-img:hover img {
+      transform: scale(1.02);
+    }
+
+    /* values / pillars */
+    .values-section {
+      background: #FEF8F0;
+      border-radius: 48px;
+      padding: 48px 48px;
+      margin-bottom: 56px;
+      text-align: center;
+    }
+
+    .values-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 48px;
+      color: var(--brand-deep);
+    }
+
+    .value-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+    }
+
+    .value-card {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 32px;
+      width: 260px;
+      transition: all 0.25s;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+      border: 1px solid #F0DFD0;
+    }
+
+    .value-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--brand-amber);
+    }
+
+    .value-icon {
+      font-size: 2.8rem;
+      color: var(--brand-amber);
+      margin-bottom: 20px;
+    }
+
+    .value-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    /* team spotlight */
+    .team-spotlight {
+      margin-bottom: 56px;
+    }
+
+    .team-spotlight h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--brand-deep);
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .team-card {
+      text-align: center;
+      width: 260px;
+    }
+
+    .team-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+      border: 3px solid var(--brand-soft-gold);
+      transition: 0.2s;
+    }
+
+    .team-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .team-role {
+      color: var(--brand-amber);
+      font-weight: 500;
+      margin: 6px 0;
+    }
+
+    /* CTA banner */
+    .cta-banner {
+      background: var(--brand-deep);
+      border-radius: 48px;
+      padding: 56px 48px;
+      text-align: center;
+      margin: 40px 0 64px;
+      color: white;
+    }
+
+    .cta-banner h3 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .cta-banner p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      opacity: 0.9;
+    }
+
+    .btn-light {
+      background: var(--brand-amber);
+      color: var(--brand-deep);
+      padding: 12px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      transition: 0.2s;
+    }
+
+    .btn-light:hover {
+      background: #f0b280;
+      transform: translateY(-3px);
+    }
+
+    /* footer */
+    .footer {
+      background: var(--brand-deep);
+      color: #f3e3da;
+      padding: 48px 0 32px;
+      margin-top: 20px;
+      border-radius: 40px 40px 0 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-col h4 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      color: var(--brand-soft-gold);
+    }
+
+    .footer-col p, .footer-col a {
+      color: #ddcfc7;
+      text-decoration: none;
+      line-height: 1.6;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .footer-col i {
+      margin-right: 8px;
+      color: var(--brand-amber);
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,215,180,0.2);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        padding: 0 20px;
+      }
+      .hero-content {
+        padding: 36px 28px;
+      }
+      .hero-content h1 {
+        font-size: 2.4rem;
+      }
+      .hero-image {
+        margin: 0 20px 20px 20px;
+        min-height: 280px;
+      }
+      .story-section {
+        padding: 32px 24px;
+      }
+      .story-grid {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <i class="fas fa-feather-alt brand-icon"></i>
+      <span class="brand-name">LUMINA ESSENCE</span>
+      <span class="brand-sup">®</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      <a href="#" class="cart-icon"><i class="fas fa-bag-shopping"></i></a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <!-- About Hero with unique brand storytelling -->
+    <div class="about-hero">
+      <div class="hero-content">
+        <h1>Where heritage meets<br>the luminous now</h1>
+        <div class="hero-tagline">Ceramics, textiles & rituals — crafted by hand, guided by light.</div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-number">2018</span><br>founded in Portland</div>
+          <div class="stat"><span class="stat-number">14+</span><br>artisan partners</div>
+          <div class="stat"><span class="stat-number">100%</span><br>carbon-neutral</div>
+        </div>
+      </div>
+      <div class="hero-image" aria-label="Artisan workshop with natural light"></div>
+    </div>
+
+    <!-- Story: roots & philosophy -->
+    <div class="story-section">
+      <div class="story-grid">
+        <div class="story-text">
+          <h2>The Lumina origin</h2>
+          <p>Lumina Essence was born from a simple belief: objects we use daily should carry warmth, soul, and purpose. Founded in 2018 by designer Elena Marchetti, our studio began in a small atelier in the Pacific Northwest, blending ancient craft techniques with modern, eco-conscious design.</p>
+          <p>We partner with master artisans across the globe — from ceramicists in Mexico to weavers in India — each piece bearing the unique fingerprint of its maker. Every candle, vase, and textile is created with slow, intentional methods: low-waste production, natural pigments, and renewable materials.</p>
+          <p><strong>“LUMINA”</strong> means light — the guiding force behind our designs. We create objects that illuminate spaces and rituals, inviting quiet presence into everyday life.</p>
+        </div>
+        <div class="story-img">
+          <img src="https://picsum.photos/id/29/500/600" alt="Artisan hands shaping clay at Lumina Essence workshop">
+        </div>
+      </div>
+    </div>
+
+    <!-- values pillars -->
+    <div class="values-section">
+      <h2>What we stand for ✦</h2>
+      <div class="value-cards">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-hand-sparkles"></i></div>
+          <h3>Artisan First</h3>
+          <p>Ethical partnerships and fair wages. We celebrate the human hands behind every creation.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Radical Sustainability</h3>
+          <p>Zero-waste packaging, plant-based dyes, and carbon-neutral shipping from day one.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-heart"></i></div>
+          <h3>Slow Made</h3>
+          <p>No mass production — each batch is small, deliberate, and deeply considered.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- The makers: team spotlight with unique images -->
+    <div class="team-spotlight">
+      <h2>Meet the Lumina collective</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img class="team-img" src="https://picsum.photos/id/64/200/200" alt="Portrait of Elena Marchetti, founder">
+          <h3>Elena Marchetti</h3>
+          <div class="team-role">Founder & Creative Director</div>
+          <p style="font-size:0.85rem; margin-top:8px;">Former ceramicist with a passion for natural textures.</p>
+        </div>
+        <div class="team-card">
+          <img class="team-img" src="https://picsum.photos/id/91/200/200" alt="Portrait of James Park, head of craft">
+          <h3>James Park</h3>
+          <div class="team-role">Head of Craft & Sustainability</div>
+          <p style="font-size:0.85rem; margin-top:8px;">Leads our global artisan partnerships and eco-materials.</p>
+        </div>
+        <div class="team-card">
+          <img class="team-img" src="https://picsum.photos/id/27/200/200" alt="Portrait of Priya Khanna, design lead">
+          <h3>Priya Khanna</h3>
+          <div class="team-role">Textile Designer</div>
+          <p style="font-size:0.85rem; margin-top:8px;">Handloom specialist and natural dye alchemist.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- featured impact / unique brand fact -->
+    <div style="background: #FFF3E8; border-radius: 40px; padding: 40px; margin-bottom: 40px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between;">
+      <div style="max-width: 280px;"><i class="fas fa-tree" style="font-size: 2rem; color: #E67E3A;"></i><h3 style="margin: 12px 0 8px;">1,200+ trees planted</h3><p>Through our partnership with OneTreePlanted.</p></div>
+      <div style="max-width: 280px;"><i class="fas fa-recycle" style="font-size: 2rem; color: #E67E3A;"></i><h3 style="margin: 12px 0 8px;">85% recycled packaging</h3><p>We're moving toward 100% plastic-free by 2027.</p></div>
+      <div style="max-width: 280px;"><i class="fas fa-hands-helping" style="font-size: 2rem; color: #E67E3A;"></i><h3 style="margin: 12px 0 8px;">Women-led workshops</h3><p>70% of our partner studios are female-owned cooperatives.</p></div>
+    </div>
+
+    <!-- CTA banner: inviting to shop -->
+    <div class="cta-banner">
+      <h3>Become part of the story</h3>
+      <p>Explore our latest collection and bring luminous craft into your home.</p>
+      <a href="index.html" class="btn-light">Shop signature pieces →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <h4><i class="fas fa-feather-alt"></i> LUMINA ESSENCE</h4>
+      <p>Radical warmth & artisan soul — curated for the conscious.</p>
+      <p><i class="fas fa-map-pin"></i> 417 Harmony Lane, Portland</p>
+      <p><i class="fas fa-envelope"></i> hello@luminaessence.com</p>
+    </div>
+    <div class="footer-col">
+      
+  </div>
+  <div class="container copyright">
+    <p>© 2025 Lumina Essence — Designed with intention. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Smooth interaction for any internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== "#" && href !== "#!" && href !== "#0") {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+  console.log("Lumina Essence — About page loaded: celebrating craft & light.");
+</script>
+</body>
+</html>

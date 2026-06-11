@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>LUMINA ESSENCE | Terms of Service</title>
+  <!-- Google Fonts & reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf6;
+      color: #1e1b1a;
+      line-height: 1.5;
+    }
+
+    /* Brand colors - consistent with home page */
+    :root {
+      --brand-deep: #2C1A2E;
+      --brand-amber: #E67E3A;
+      --brand-cream: #FFF9F0;
+      --brand-soft-gold: #F4C3A2;
+      --brand-gray: #5A4B49;
+      --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* header same as home for consistent branding */
+    .site-header {
+      background: var(--brand-cream);
+      border-bottom: 1px solid rgba(230, 126, 58, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      font-size: 28px;
+      color: var(--brand-amber);
+    }
+
+    .brand-name {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #2C1A2E 0%, #E67E3A 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .brand-sup {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--brand-gray);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--brand-deep);
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-amber);
+    }
+
+    /* Terms main content area */
+    .terms-hero {
+      background: linear-gradient(120deg, #FDF6EC 0%, #F9E9DA 100%);
+      border-radius: 48px;
+      padding: 48px 56px;
+      margin: 32px 0 40px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .terms-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--brand-deep);
+      margin-bottom: 16px;
+    }
+
+    .terms-hero p {
+      font-size: 1.1rem;
+      color: #4a3a35;
+      max-width: 80%;
+    }
+
+    .last-updated {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: var(--brand-gray);
+      border-top: 1px solid rgba(230,126,58,0.25);
+      padding-top: 18px;
+      display: inline-block;
+    }
+
+    .terms-content {
+      background: white;
+      border-radius: 32px;
+      padding: 48px 56px;
+      margin-bottom: 64px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.03);
+      border: 1px solid #fae6d8;
+    }
+
+    .terms-section {
+      margin-bottom: 40px;
+    }
+
+    .terms-section h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--brand-deep);
+      margin-bottom: 20px;
+      border-left: 5px solid var(--brand-amber);
+      padding-left: 20px;
+    }
+
+    .terms-section h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 24px 0 12px 0;
+      color: #3e2a2b;
+    }
+
+    .terms-section p, .terms-section li {
+      color: #2d2a28;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .terms-section ul, .terms-section ol {
+      margin: 16px 0 16px 32px;
+    }
+
+    .terms-section li {
+      margin-bottom: 8px;
+    }
+
+    .highlight-box {
+      background: #FEF3EA;
+      border-radius: 24px;
+      padding: 28px 32px;
+      margin: 32px 0;
+      border-left: 4px solid var(--brand-amber);
+    }
+
+    .highlight-box i {
+      color: var(--brand-amber);
+      margin-right: 12px;
+      font-size: 1.3rem;
+    }
+
+    /* footer */
+    .footer {
+      background: var(--brand-deep);
+      color: #f3e3da;
+      padding: 48px 0 32px;
+      margin-top: 20px;
+      border-radius: 40px 40px 0 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-col h4 {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+      color: var(--brand-soft-gold);
+    }
+
+    .footer-col p, .footer-col a {
+      color: #ddcfc7;
+      text-decoration: none;
+      line-height: 1.6;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .footer-col i {
+      margin-right: 8px;
+      color: var(--brand-amber);
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,215,180,0.2);
+      font-size: 0.8rem;
+    }
+
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--brand-deep);
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 24px;
+      transition: 0.2s;
+    }
+
+    .back-home:hover {
+      background: #3e2541;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        padding: 0 20px;
+      }
+      .terms-hero, .terms-content {
+        padding: 32px 24px;
+      }
+      .terms-hero h1 {
+        font-size: 2rem;
+      }
+      .terms-hero p {
+        max-width: 100%;
+      }
+      .header-inner {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .terms-section h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <i class="fas fa-feather-alt brand-icon"></i>
+      <span class="brand-name">LUMINA ESSENCE</span>
+      <span class="brand-sup">®</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      <a href="#" class="cart-icon"><i class="fas fa-bag-shopping"></i></a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <!-- Terms Hero Section -->
+    <div class="terms-hero">
+      <h1>Terms of Service</h1>
+      <p>Welcome to Lumina Essence. These terms outline the rules and regulations for using our website and purchasing our handcrafted goods. By accessing this website, we assume you accept these terms.</p>
+      <div class="last-updated">
+        <i class="far fa-calendar-alt"></i> Last updated: June 11, 2026
+      </div>
+    </div>
+
+    <!-- Full Terms Content -->
+    <div class="terms-content">
+      <div class="terms-section">
+        <h2>1. General Conditions</h2>
+        <p>Lumina Essence ("we", "us", "our") provides this website and all related services subject to the following conditions. If you disagree with any part of these terms, you may not access the website or purchase our products. We reserve the right to refuse service to anyone for any reason at any time.</p>
+        <p>Our store is hosted on secure commerce infrastructure. By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>2. Products & Craftsmanship</h2>
+        <p>All items featured on Lumina Essence are handcrafted with natural materials. Slight variations in color, texture, or form are inherent to artisanal production and are not considered defects — they celebrate the uniqueness of each piece. Product descriptions and images are for illustrative purposes. While we strive for accuracy, actual finishes may differ subtly due to screen settings or natural material inconsistencies.</p>
+        <div class="highlight-box">
+          <i class="fas fa-hand-sparkles"></i> <strong>Artisan promise:</strong> Each piece is made with ethical sourcing and sustainable practices. We guarantee that our ceramics, textiles, and candles are free from harmful chemicals and produced in fair-trade environments.
+        </div>
+      </div>
+
+      <div class="terms-section">
+        <h2>3. Pricing & Payment</h2>
+        <p>All prices are listed in USD ($) and do not include applicable taxes or shipping fees unless otherwise noted. We reserve the right to change prices for products at any time without prior notice. We accept major credit cards (Visa, Mastercard, American Express) and digital payment options via secure gateway. By placing an order, you agree to provide current, complete, and accurate purchase and account information.</p>
+        <p>In the event of a pricing error, we reserve the right to cancel any orders placed with incorrect pricing, even after an order confirmation has been sent. You will be notified and refunded promptly.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>4. Shipping & Delivery</h2>
+        <p>We ship worldwide from our Portland atelier. Standard processing time is 3–5 business days. Delivery estimates vary by region: 5–10 business days for domestic (USA) and 10–20 business days for international orders. Lumina Essence is not responsible for delays caused by customs, carrier disruptions, or extreme weather conditions. You will receive a tracking number once your order has been dispatched.</p>
+        <ul>
+          <li><strong>Carbon-neutral shipping:</strong> All shipments are offset with verified environmental projects.</li>
+          <li><strong>Customs & duties:</strong> International customers are responsible for any import fees or taxes levied by their country.</li>
+        </ul>
+      </div>
+
+      <div class="terms-section">
+        <h2>5. Returns, Exchanges & Warranty</h2>
+        <p>We stand behind our craftsmanship. If you are not entirely satisfied, we accept returns within 14 days of delivery for store credit or exchange. Items must be unused, in original packaging, and accompanied by proof of purchase. Final sale items (including custom commissions, incense, and clearance goods) are not eligible for returns.</p>
+        <p><strong>Lifetime Craft Warranty:</strong> For ceramics, textiles, and signature candles (vessel only), we offer free repair or replacement for manufacturing defects. Normal wear and tear, accidental damage, or misuse are not covered. Contact our care team at <a href="mailto:care@luminaessence.com" style="color: var(--brand-amber);">care@luminaessence.com</a> with photos and order number to initiate a warranty claim.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>6. Intellectual Property</h2>
+        <p>All content on this website — including product designs, photography, branding, text, graphics, logos, and the name “Lumina Essence” — is the exclusive property of Lumina Essence Studio and protected by international copyright and trademark laws. You may not reproduce, distribute, modify, or exploit any part of our IP without explicit written consent.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>7. User Accounts & Accuracy</h2>
+        <p>To place an order, you may be required to create an account. You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account. We reserve the right to terminate accounts or cancel orders if we suspect fraudulent activity or violation of these terms.</p>
+        <p>We make every effort to display product colors and details accurately, but we cannot guarantee that your monitor's display reflects reality.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>8. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Lumina Essence shall not be liable for any indirect, incidental, or consequential damages arising from the use of our products or website, including but not limited to loss of profit, data, or goodwill. Our total liability for any claim related to your purchase shall not exceed the amount paid for the product in question.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>9. Governing Law</h2>
+        <p>These Terms of Service and any separate agreements shall be governed by and construed in accordance with the laws of the State of Oregon, United States, without regard to its conflict of law provisions. Any disputes arising from these terms shall be resolved exclusively in the state or federal courts located in Multnomah County, Oregon.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>10. Changes to Terms</h2>
+        <p>We reserve the right to update, modify, or replace any part of these Terms of Service by posting updates on this page. It is your responsibility to check periodically for changes. Your continued use of the website following any changes constitutes acceptance of those modifications.</p>
+      </div>
+
+      <div class="highlight-box">
+        <i class="fas fa-envelope-open-text"></i> <strong>Contact us:</strong> For any questions regarding these terms, please reach out to our legal & support team at <strong>legal@luminaessence.com</strong> or via mail at: 417 Harmony Lane, Portland, OR 97201, USA.
+      </div>
+
+      <!-- Return to Home link -->
+      <div style="margin-top: 48px; text-align: center;">
+        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Return to Lumina Essence Home</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <h4><i class="fas fa-feather-alt"></i> LUMINA ESSENCE</h4>
+      <p>Radical warmth & artisan soul — curated for the conscious.</p>
+      <p><i class="fas fa-map-pin"></i> 417 Harmony Lane, Portland</p>
+      <p><i class="fas fa-envelope"></i> hello@luminaessence.com</p>
+    </div>
+    <div class="footer-col">
+      
+  </div>
+  <div class="container copyright">
+    <p>© 2025 Lumina Essence — Designed with intention. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Simple interactive: active page indicator for terms (optional)
+  const currentLocation = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-links a');
+  // small enhancement: ensure terms page link highlight if needed, but not necessary.
+  console.log("Terms of Service page — Lumina Essence legal information");
+</script>
+</body>
+</html>
